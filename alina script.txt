@@ -1,0 +1,29 @@
+insert into beauty_salon (title, location, phone, email, work_schedule_from, work_schedule_to) values
+('Curl Bar Beauty Salon','41 Jarvis Street, Toronto,ON M5E 0A1, Canada','4167772875','Info@curlbar.Ca','10:00:00', '18:00:00');
+
+insert into staff (`name`, post, factor_of_utility, salary, number_of_working_days, date_of_admission, work_schedule_to, work_schedule_from) values
+('Alissa Marks','Hair Stylist', 1.13, 1543, 24, '2021-11-16 14:42:31', '09:00:00', '18:30:00');
+
+insert into services (title, `description`, cost) values
+('Hair Cutting & Styling','Hair Cutting & Styling has evolved over the years, gone are the days of getting your hair “wetted down” and having a quick trim! Lots of us now look to the latest hair trends in magazines, on celebrities and on the big screen leaving us all wanting to stay ahead of the game. However, just like the latest fashions might not be suitable for all shapes and sizes, the same can be said for the latest fashions when it comes to haircuts and hairstyles. Achieving the best haircuts and hairstyle comes with knowing your client’s needs, personality and lifestyle. Every client starts their journey towards the perfect haircut with a relaxed and informal chat. After the client has talked through their desired haircut and hairstyle and had the benefit of our professional advice, their hairstyle is transformed and vision accomplished. We understand how a great hairstyle can change the way you look and feel, so we discuss every stage with you to achieve the best style possible.', 94);
+
+insert into customers (email, phone, `name`, date_of_joining) values
+('anstar@gmail.com', '16478481480', 'Anika Sutton', '2023-01-16');
+
+insert into discount_promotions (title, `condition`, time_of_action_from, time_of_action_to, discount_amount) values
+('Birthday discount', 'One of the benefits of joining the "Curl Bar Beauty Salon" includes getting a treat on your birthday.', null, null, 25);
+
+insert into monthly_expenses (title, expenses, `description`) values
+('Rent of premises', 600, null);
+
+insert into customers_to_staff (id_staff, id_customer, id_service, appointment_time, id_discount_promotions) values
+(1, 1, 1, '2023-03-21 11:30:00', 1);
+
+insert into staff_to_services (id_staff, id_service) values
+(1,1);
+
+insert into staff_to_beauty_salon (idbeauty_salon, idstaff) values
+(1,1);
+
+insert into beauty_salon_to_expenses (idmonthly_expense, idbeauty_salon) values
+(1,1);
